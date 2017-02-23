@@ -1,0 +1,19 @@
+megs: 1024
+romimage: file=$BXSHARE/BIOS-bochs-latest
+# if you copied the file in the local directory, use instead
+#romimage: file=BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+# if you copied the 2.40 file in the local directory, use instead
+#vgaromimage: file=VGABIOS-elpin-2.40
+#boot: disk, cdrom
+#boot: floppy
+floppya: 1_44=boot.img, status=inserted
+#ata0-master: type=disk, path="minix.img", mode=flat
+#ata1-master: type=cdrom, path="minix_R3.3.0-588a35b.iso", status=inserted
+log: out.bochs
+mouse: enabled=0
+com1: enabled=1, mode=file, dev="serial.out"
+# On FreeBSD, add something like
+#e1000: enabled=1, mac=b0:c4:20:00:00:00, ethmod=fbsd, ethdev=xn0
+# On Windows, add
+#e1000: enabled=1, mac=52:54:00:0E:10:00, ethmod=win32, ethdev=\Device\NPF_{guidguid-guid-guid-guid-guidguidguid}
